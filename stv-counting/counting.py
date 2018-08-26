@@ -34,3 +34,15 @@ def read_data(filepath):
             else:
                 final_election_data.append(l)
     return num_candidates, available_seats, final_election_data
+
+def valid_votes(election_data):
+    """
+    The following function receives a list of lists (election data)
+    and returns the number of valid votes
+    :param election_data: election data
+    :return:
+    """
+    valid_votes = 0
+    for data in election_data:
+        valid_votes += data[0]
+    return valid_votes
